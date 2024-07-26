@@ -1,0 +1,57 @@
+:root {
+    --background-color: #fcf7ef;
+    --dark-color: #31231E;
+    --secondary-color: #84714F;
+    --light-color: #E3D888;
+    --header-color: #5A3A31;
+
+    font-size: 16px;
+}
+
+body {
+
+    /* Default CSS */
+    padding: 0;
+    margin: 0;
+
+    background-color: var(--background-color);
+}
+
+/* H E A D E R */
+
+.header {
+    background-color: var(--header-color);
+    height: 7vh;
+    padding: 20px 40px 20px 40px;
+
+    /* flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+
+    /* font */
+    font-family: "ADLaM Display";
+    color: white;
+    font-size: 3rem;
+    
+}
+
+.newBook {
+
+    /* font */
+    font-family: "Nunito";
+    color: var(--header-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    /* Dimensions */
+    height: 5vh;
+    width: 12vw;
+
+    /* Appearance */
+    background-color: var(--light-color);
+    border-style: none;
+}
