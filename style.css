@@ -1,11 +1,15 @@
 :root {
-    --background-color: #fcf7ef;
+    --content-color: #fcf7ef;
+    --background-color: #5A3A31;
     --dark-color: #31231E;
     --secondary-color: #84714F;
-    --light-color: #E3D888;
+    --button-color: rgb(247, 237, 226);
+    --view-color: #f1c89a;
     --header-color: #5A3A31;
 
+    --single-view-toggle : calc(240px + 12vw) ;
     font-size: 16px;
+
 }
 
 body {
@@ -14,15 +18,23 @@ body {
     padding: 0;
     margin: 0;
 
+    height: 100vh;
+
     background-color: var(--background-color);
+
+    /* grid */
+    display: flex;
+    flex-direction: column
 }
 
 /* H E A D E R */
 
 .header {
     background-color: var(--header-color);
-    height: 7vh;
-    padding: 20px 40px 20px 40px;
+
+    box-sizing: border-box;
+    height: 10vh;
+    padding: 20px 120px 20px 120px;
 
     /* flexbox */
     display: flex;
@@ -36,7 +48,7 @@ body {
     font-family: "ADLaM Display";
     color: white;
     font-size: 3rem;
-    
+
 }
 
 .newBook {
@@ -50,8 +62,54 @@ body {
     /* Dimensions */
     height: 5vh;
     width: 12vw;
+    overflow: hidden;
 
     /* Appearance */
-    background-color: var(--light-color);
+    background-color: var(--button-color);
     border-style: none;
+}
+
+/* M A I N   C O N T E N T */
+
+.contents {
+
+    background-color: var(--content-color);
+
+    /* Dimensions */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    
+    
+    /* flex & grid*/
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr var(--single-view-toggle) ;
+    gap: 5px;
+}
+
+.multiBooksView,
+.singleBookView {
+
+    /* Rounding the borders */
+    border-radius: 10px;
+
+    /* Background Color */
+    background-color: var(--view-color);
+
+}
+
+.multiBooksView {
+}
+
+.singleBookView {
+}
+
+/* F O O T E R */
+
+.footer {
+    background-color: var(--header-color);
+
+    box-sizing: border-box;
+    height: 7vh;
 }
