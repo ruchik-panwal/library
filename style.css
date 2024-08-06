@@ -7,7 +7,7 @@
     --view-color: #f1c89a;
     --header-color: #5A3A31;
 
-    --single-view-toggle : calc(240px + 12vw) ;
+    --single-view-toggle: calc(240px + 12vw);
     font-size: 16px;
 
 }
@@ -26,6 +26,9 @@ body {
     display: flex;
     flex-direction: column
 }
+
+
+
 
 /* H E A D E R */
 
@@ -69,6 +72,9 @@ body {
     border-style: none;
 }
 
+
+
+
 /* M A I N   C O N T E N T */
 
 .contents {
@@ -79,17 +85,19 @@ body {
     box-sizing: border-box;
     padding: 5px;
     border-radius: 10px;
-    
-    
+
+
     /* flex & grid*/
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr var(--single-view-toggle) ;
+    grid-template-columns: 1fr var(--single-view-toggle);
     gap: 5px;
 }
 
 .multiBooksView,
 .singleBookView {
+
+    font-family: "Nunito";
 
     /* Rounding the borders */
     border-radius: 10px;
@@ -99,11 +107,104 @@ body {
 
 }
 
-.multiBooksView {
+.viewTitle {
+    /* Font Properties */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--header-color);
+
+    text-align: center;
 }
 
-.singleBookView {
+
+
+
+/* Multiple Books View */
+
+.multiBooksView {}
+
+.mbvHeader {
+    padding: 20px;
+
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
+form.bookSearch {
+    background-color: #7d5e5634;
+    
+
+    /* Dimensions */
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 2.5vh;
+    height: 5vh;
+
+    /* Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookSearch button[Type="submit"] {
+
+    background : none;
+
+    /* Dimensions */
+    height: 2vw;
+    width: 2vw;
+    border-style: none;
+    border-radius: 1vw;
+}
+
+button[Type="submit"] i {
+
+    color: var(--header-color);
+    opacity: 1;
+    font-size: 1.2rem;
+}
+
+.bookSearch input[Type = "text"]{
+
+    border: none;
+    /* background: none; */
+
+    /* Dimensions */
+    margin: 10px 5px 10px 10px;
+    height: 1.2vw;
+    width: 12vw;
+}
+
+
+
+
+/* Single Book View */
+
+.singleBookView {
+    padding: 10px;
+
+    /* Flex */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.bookCover {
+
+    background-color: white;
+
+
+    /* Dimensions */
+    width: 60%;
+    height: 30vh;
+}
+
+
+
 
 /* F O O T E R */
 
