@@ -8,6 +8,7 @@
     --header-color: #5A3A31;
 
     --single-view-toggle: calc(240px + 12vw);
+    /* --single-view-toggle: 50px; */
     font-size: 16px;
 
 }
@@ -118,13 +119,12 @@ body {
 
 
 
-
 /* Multiple Books View */
 
 .multiBooksView {
 
     box-sizing: border-box;
-    overflow:hidden;
+    overflow: hidden;
 
     /* flex */
     display: flex;
@@ -149,7 +149,7 @@ body {
 
 form.bookSearch {
     background-color: #7d5e5634;
-    
+
 
     /* Dimensions */
     box-sizing: border-box;
@@ -165,7 +165,7 @@ form.bookSearch {
 
 .bookSearch button[Type="submit"] {
 
-    background : none;
+    background: none;
 
     /* Dimensions */
     height: 2vw;
@@ -181,7 +181,7 @@ button[Type="submit"] i {
     font-size: 1.2rem;
 }
 
-.bookSearch input[Type = "text"]{
+.bookSearch input[Type="text"] {
 
     border: none;
     /* background: none; */
@@ -194,8 +194,8 @@ button[Type="submit"] i {
 
 /* Bookshelf */
 
-.bookshelf{
-    background-color: #567212;
+.bookshelf {
+
     width: 90%;
     height: 80%;
     padding: 20px;
@@ -207,14 +207,35 @@ button[Type="submit"] i {
     grid-template-columns: repeat(auto-fit, 20vh);
     align-items: center;
     grid-auto-flow: column;
-    overflow-x: auto;
     gap: 40px;
+    column-gap: 80px;
 
+    /* Scrollbar */
+    overflow-x: auto;
 }
 
-.bookCard{
-    background-color: white;
+.bookshelf::-webkit-scrollbar {
+    height: 10px;
+}
+
+.bookshelf::-webkit-scrollbar-track {
+    background: white ;
     
+}
+
+.bookshelf::-webkit-scrollbar-thumb {
+    background-color: var(--dark-color);
+    border-radius: 20px;
+    border: 0px solid rgba(255, 166, 0, 0);
+}
+
+.bookshelf::-webkit-scrollbar-track{
+    
+}
+
+.bookCard {
+    background-color: white;
+
 
     /* flex */
     display: flex;
@@ -222,7 +243,7 @@ button[Type="submit"] i {
     align-items: center;
 }
 
-.cardImg{
+.cardImg {
 
     height: 20vh;
     width: 20vh;
@@ -230,11 +251,11 @@ button[Type="submit"] i {
     background-color: black;
 }
 
-.cardTitle{
+.cardTitle {
     margin-top: 5px;
 }
 
-.filler{
+.filler {
     width: 20vh;
     height: 20vh;
 }
