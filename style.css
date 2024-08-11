@@ -196,10 +196,12 @@ button[Type="submit"] i {
 
 .bookshelf {
 
-    width: 90%;
+    width: 80%;
     height: 80%;
-    padding: 20px;
+    padding: 30px;
     box-sizing: border-box;
+
+
 
     /* Grid */
     display: grid;
@@ -219,8 +221,8 @@ button[Type="submit"] i {
 }
 
 .bookshelf::-webkit-scrollbar-track {
-    background: white ;
-    
+    background: none;
+
 }
 
 .bookshelf::-webkit-scrollbar-thumb {
@@ -229,8 +231,8 @@ button[Type="submit"] i {
     border: 0px solid rgba(255, 166, 0, 0);
 }
 
-.bookshelf::-webkit-scrollbar-track{
-    
+.bookshelf::before {
+    background-image: linear-gradient(to right, var(--view-color), rgb(0, 0, 0), var(--view-color));
 }
 
 .bookCard {
@@ -259,6 +261,8 @@ button[Type="submit"] i {
     width: 20vh;
     height: 20vh;
 }
+
+
 
 /* Single Book View */
 
