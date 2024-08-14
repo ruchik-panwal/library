@@ -267,13 +267,19 @@ button[Type="submit"] i {
 /* Single Book View */
 
 .singleBookView {
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 20px;
 
-    /* Flex */
+    /* Grid */
     display: grid;
+    grid-template-rows: 60px 300px 3cm;
     justify-items: center;
-    align-items: center;
+    
 
+}
+
+.viewTitle {
+    box-sizing: border-box;
 }
 
 .bookCover {
@@ -286,7 +292,29 @@ button[Type="submit"] i {
     height: 30vh;
 }
 
+.coverEdit{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    
+}
+.coverEdit i {
+    font-size: 50px;
+    color: gray;
+}
+
+.coverEdit:hover{
+    background-color: rgba(0, 0, 0, 0.112);
+    cursor:grab;
+}
+
+form div{
+    width: 300px;
+    height: 30px;
+    font-size: 1.3rem;
+}
 
 /* F O O T E R */
 
