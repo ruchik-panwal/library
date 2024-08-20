@@ -65,7 +65,7 @@ body {
 
     /* Dimensions */
     height: 5vh;
-    width: 12vw;
+    width: 250px;
     overflow: hidden;
 
     /* Appearance */
@@ -288,7 +288,7 @@ button[Type="submit"] i {
 
 
     /* Dimensions */
-    width: 60%;
+    width: 30vh;
     height: 30vh;
 }
 
@@ -310,10 +310,24 @@ button[Type="submit"] i {
     cursor:grab;
 }
 
-form div{
-    width: 300px;
-    height: 30px;
+form.addBook{
+    width: 100%;
+
+    /* grid */
+    display: grid;
+    grid-template-rows: repeat(4 , 5vh);
+    gap: 5px;
+    justify-items: center;
+}
+
+form.addBook div{
+    width: 80%;
     font-size: 1.3rem;
+
+    /* flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* F O O T E R */
