@@ -10,8 +10,7 @@
     <!-- Adding CSS File -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Adding Javascript File -->
-    <script src="javascript.js"></script>
+    
 
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/befdb26257.js" crossorigin="anonymous"></script>
@@ -138,22 +137,23 @@
             <!-- form -->
             <form class="addBook">
 
-                <div class="titleIn">
-                    <label for="bookTitle">Title</label>
+                <div class="titleIn grid">
+                    <label for="bookTitle">Title :</label>
                     <input type="text" id="bookTitle">
                 </div>
 
-                <div class="authorIn">
-                    <label for="authorName">Author</label>
+                <div class="authorIn grid">
+                    <label for="authorName">Author :</label>
                     <input type="text" id="authorName">
                 </div>
-                
-                <div class="statusIn">
-                    <label for="status">Reading Status</label>
-                    <input type="button" value="" id="status">
+
+                <div class="statusIn grid">
+                    <div class="statInd"></div>
+                    <input type="button" value="Read" id="status">
+                    <input type="button" value="Not Read" id="status">
                 </div>
 
-                <div class="submitIn">
+                <div class="submitIn grid">
                     <button type="submit">Add</button>
                 </div>
 
@@ -165,6 +165,10 @@
 
     <div class="footer"></div>
 
+    <!-- Adding Javascript File and GSAP cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascript.js"></script>
+    
 </body>
 
 </html>
