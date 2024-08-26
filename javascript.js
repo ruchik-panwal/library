@@ -5,10 +5,34 @@ const library = [{
     status: ""
 }];
 
-gsap.to(".statInd" , {
-    x : 162,
-    duration : 1,
-    delay : 1 ,
-    ease : "none"
-})
+
+
+
+
+// Status button Animation
+function statAni() {
+
+    ani = gsap.to(".statInd", {
+        x: 171,
+        duration: 1,
+        delay: 0,
+        ease: "expo.inOut"
+    })
+}
+
+
+// This takes the input from the status button and shows the animation
+const readBtn = document.querySelectorAll("#status");
+readBtn.forEach((readBtn) => {
+
+    readBtn.addEventListener('click', () => {
+        if (readBtn.value == "Read")
+            ani.reverse();
+        else
+            statAni();
+    })
+
+});
+
+
 
