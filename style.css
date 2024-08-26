@@ -372,14 +372,14 @@ form.addBook .grid {
 }
 
 .statInd {
-    background-color: red;
+    background-color: rgb(0, 255, 81);
 
     position: absolute;
 
     left: 5px;
     border-radius: 30px;
     height: 80%;
-    width: 9vw;
+    width: 8.5vw;
 }
 
 .statusIn input {
