@@ -9,7 +9,7 @@
 
     --single-view-toggle: calc(240px + 12vw);
     /* --single-view-toggle: 50px; */
-    font-size: 16px;
+    font-size: 2vh;
 
 }
 
@@ -274,17 +274,10 @@ button[Type="submit"] i {
 /* Single Book View */
 
 .singleBookView {
+
     box-sizing: border-box;
     padding: 20px;
     height: 100%;
-
-    /* Grid */
-    display: grid;
-    grid-template-rows: 60px 300px;
-    justify-items: center;
-    align-items: center;
-
-
 }
 
 .viewTitle {
@@ -294,7 +287,8 @@ button[Type="submit"] i {
 .bookCover {
 
     background-color: white;
-
+    justify-self: center;
+    align-self: center;
 
     /* Dimensions */
     width: 30vh;
@@ -304,10 +298,8 @@ button[Type="submit"] i {
 .coverEdit {
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-
-
+    align-items: center;
 }
 
 .coverEdit i {
@@ -321,24 +313,32 @@ button[Type="submit"] i {
 }
 
 form.addBook {
+
     width: 100%;
 
     /* grid */
     display: grid;
-    grid-template-rows: repeat(2, 5vh) 7vh 5vh;
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: 35vh repeat(2, 5vh) 7vh 5vh;
+    gap: 15px;
+
+    justify-content: center;
+    align-content: center;
 }
 
 form.addBook .grid {
-    width: 80%;
     font-size: 1.3rem;
 
-    /* flex */
+
+    /* flex on every form component */
     display: flex;
+    align-content: center;
+}
+
+
+.titleIn,
+.authorIn {
     justify-content: space-between;
-    align-items: center;
+    width: 19vw;
 }
 
 .titleIn input,
@@ -355,31 +355,28 @@ form.addBook .grid {
     box-sizing: border-box;
 }
 
+
+/* Book status Indicator */
+
 .statusIn {
     position: relative;
-
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 5px;
-    margin-top: 25px;
     background-color: white;
-
     border-radius: 25px;
-    height: 5vh;
+    height: 4.5vh;
 
-    /* flex */
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .statInd {
     background-color: rgb(0, 255, 81);
-
     position: absolute;
-
     left: 5px;
     border-radius: 30px;
     height: 80%;
-    width: 8.5vw;
+    width: 47%;
 }
 
 .statusIn input {
@@ -389,10 +386,17 @@ form.addBook .grid {
     height: 100%;
     border-radius: 25px;
     border-style: none;
-
     z-index: 1;
-
 }
+
+/* ADD Book Button */
+.submitIn {
+
+    /* Positioning */
+    justify-self: center;
+}
+
+
 
 /* F O O T E R */
 
