@@ -15,11 +15,13 @@ function statAni() {
     count = 1;
     ani = gsap.to(".statInd", {
         x: "106%",
+        backgroundColor: "#0AE448",
         duration: 1,
         delay: 0,
         ease: "expo.inOut"
     })
 }
+
 
 // This takes the input from the status button and shows the animation
 const readBtn = document.querySelectorAll("#status");
