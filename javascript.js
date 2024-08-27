@@ -7,12 +7,11 @@ const library = [{
 
 
 
-count = 1;
+count = 0;
 
 // Status button Animation
 function statAni() {
 
-    count = 1;
     ani = gsap.to(".statInd", {
         x: "106%",
         backgroundColor: "#0AE448",
@@ -28,10 +27,14 @@ const readBtn = document.querySelectorAll("#status");
 readBtn.forEach((readBtn) => {
 
     readBtn.addEventListener('click', () => {
-        if (readBtn.value == "Read")
+        if (readBtn.value == "Read") {
+            count = 0;
             ani.reverse();
-        if (readBtn.value == "Not Read" && count == 1) {
+        }
+
+        if (readBtn.value == "Not Read" && count == 0) {
             statAni();
+            count = 1;
         }
     })
 
