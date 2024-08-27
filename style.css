@@ -243,8 +243,6 @@ button[Type="submit"] i {
 }
 
 .bookCard {
-    background-color: white;
-
 
     /* flex */
     display: flex;
@@ -253,15 +251,26 @@ button[Type="submit"] i {
 }
 
 .cardImg {
-
     height: 20vh;
     width: 20vh;
 
-    background-color: black;
+    background-color: white;
+}
+
+.cardImg img{
+    width: 100%;
+    object-fit: contain;
 }
 
 .cardTitle {
     margin-top: 5px;
+}
+
+.authorName{
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 2px;
 }
 
 .filler {
@@ -312,20 +321,20 @@ button[Type="submit"] i {
     cursor: grab;
 }
 
-form.addBook {
+form.addBookForm {
 
     width: 100%;
 
     /* grid */
     display: grid;
-    grid-template-rows: 37vh repeat(2, 5vh) 10vh 7vh;
+    grid-template-rows: 37vh repeat(2, 5vh) 8vh 7vh;
     gap: 15px;
 
     justify-content: center;
     align-content: center;
 }
 
-form.addBook .grid {
+form.addBookForm .grid {
     font-size: 1.3rem;
 
 
