@@ -96,8 +96,8 @@ function storeBook(tempBook) {
 
 
 function refresh() {
+    bookshelf.innerHTML = "";
     library.forEach((singleBook) => {
-        console.log(singleBook);
         storeBook(singleBook);
     });
 }
