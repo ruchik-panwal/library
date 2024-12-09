@@ -49,24 +49,26 @@ const authorName = document.querySelector("#authorName");
 addBook.addEventListener("click", (e) => {
 
     e.preventDefault();
-    library.push(Book());
+    library.push(new Book());
     refresh();
 });
 
 
 
-function Book() {
+class Book{
 
-    let book = {};
-    book.cardNo = library.length + 1;
-    book.title = title.value;
-    book.author = authorName.value;
-    book.status = statusVal;
-    book.imageUrl = "https://i.pinimg.com/736x/8f/74/6e/8f746e9dea75324611e63348163228db.jpg";
+    constructor(){
+        this.cardNo = library.length + 1;
+        this.title = title.value;
+        this.author = authorName.value;
+        this.status = statusVal;
+        this.imageUrl = "https://i.pinimg.com/736x/8f/74/6e/8f746e9dea75324611e63348163228db.jpg";
+    }
+    
     statusVal = 0;
-    return book;
 
 }
+
 
 const bookshelf = document.querySelector(".bookshelf");
 
@@ -86,8 +88,8 @@ function storeBook(tempBook) {
     cardTitle.textContent = tempBook.title;
     authorNameNew.textContent = tempBook.author;
     bookImg.src = tempBook.imageUrl;
-    cardImg.appendChild(bookImg);
 
+    cardImg.appendChild(bookImg);
     bookCard.appendChild(cardImg);
     bookCard.appendChild(cardTitle);
     bookCard.appendChild(authorNameNew);
